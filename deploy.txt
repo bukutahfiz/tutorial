@@ -100,3 +100,5 @@ DB10 → auth10
 25. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → titik tiga (...) → Retry deployment → Success.
 26. Tes aplikasi klik: bukutahfiz.pages.dev
 
+Catatan: setiap kali ganti token/password di "Variables and Secrets" harus "Retry deployment".
+
