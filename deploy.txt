@@ -59,6 +59,28 @@ npx wrangler d1 execute auth01 --remote --command "SELECT name FROM sqlite_maste
 
 15. Buka di browser: https://dash.cloudflare.com/.
 16. Masuk menggunakan akun Github.
-17. dash.cloudflare.com: Add → Pages → Import an existing Git repository → Get Started → Repo: "bukutahfiz" → Begin setup → Project name: https://bukutahfiz.pages.dev → Save and Deploy.
-18. dash.cloudflare.com: Workers and Pages → Settings → Build configuration →
+17. Account home (dash.cloudflare.com): Add → Pages → Import an existing Git repository → Get Started → Repo: "bukutahfiz" → Begin setup → Project name: https://bukutahfiz.pages.dev → Save and Deploy.
+18. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → Settings → Build configuration → "Tanda pensil" → Framework preset → Nuxt.js → Save.
+19. dash.cloudflare.com: Workers and Pages → Settings → Variables and Secrets:
+
+WHATSAPP_DEVELOPER → 08996830011
+USERS_PAGE_USERNAME → admin
+USERS_PAGE_PASSWORD → @de88RTD (bebas)
+PAID_LIFETIME_CODE → @de88RTD (bebas)
+PAID_YEARLY_CODE → @de88RTD (bebas)
+PAID_CODE_PEPPER → @de88RTD (bebas)
+RESET_CODE_PEPPER → @de88RTD (bebas)
+ARCHIVE_WORKER_URL → https://archive-manager.{bukutahfiz}.pages.dev
+ARCHIVE_WORKER_TOKEN → @de88RTD (harus sama dengan ADMIN_TOKEN Workers)
+
+20. Account home (dash.cloudflare.com): Add → Workers → Start with hello world! → Worker name: https://archive-manager.bukutahfiz.workers.dev → Deploy.
+21. dash.cloudflare.com: Workers and Pages → "archive-manager" → </> Edit code → Copy dan paste: https://github.com/raportahfiz/archivemanager/blob/main/workers.js → Deploy.
+22. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Variables and Secrets:
+
+ADMIN_TOKEN → @de88RTD (bebas)
+
+23. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Trigger Events:
+Cron expression → 8 14 * * * (artinya pukul 14:08 + 7 jam WIB)
+
+24. 
 
