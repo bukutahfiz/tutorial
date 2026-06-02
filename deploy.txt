@@ -1,7 +1,7 @@
 1. Buat email di outlook.com.
 2. Sign up Github.
 3. Buat repo private beri nama "buku tahfiz".
-4. Download Web App ZIP: https://drive.google.com/file/d/1q-lUcAMM-o_VTqIPIEZDs3RY53gGREjP/view?usp=sharing
+4. Download Web App ZIP di: https://drive.google.com/drive/folders/13DKYr1_SQAgrwC7lduk2eHteRiIqW0ym?usp=sharing
 5. Ekstrak dan taruh di desktop.
 6. Buka VS Code → File → Open Folder → bukutahfiz-v239-webapp.
 7. Vs Code: Terminal → New Terminal.
