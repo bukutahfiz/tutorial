@@ -82,5 +82,19 @@ ADMIN_TOKEN → @de88RTD (bebas)
 23. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Trigger Events:
 Cron expression → 8 14 * * * (artinya pukul 14:08 + 7 jam WIB)
 
-24. 
+24. dash.cloudflare.com: Workers and Pages → "archive-manager" → Bindings → Add binding → + Binding:
+
+DB01 → auth01
+DB02 → auth02
+DB03 → auth03
+DB04 → auth04
+DB05 → auth05
+DB06 → auth06
+DB07 → auth07
+DB08 → auth08
+DB09 → auth09
+DB10 → auth10
+
+25. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → titik tiga (...) → Retry deployment → Success.
+26. Tes aplikasi klik: bukutahfiz.pages.dev
 
