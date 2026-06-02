@@ -1,0 +1,64 @@
+1. Buat email di outlook.com.
+2. Sign up Github.
+3. Buat repo private beri nama "buku tahfiz".
+4. Download Web App ZIP: https://drive.google.com/file/d/1q-lUcAMM-o_VTqIPIEZDs3RY53gGREjP/view?usp=sharing
+5. Ekstrak dan taruh di desktop.
+6. Buka VS Code → File → Open Folder → bukutahfiz-v239-webapp.
+7. Vs Code: Terminal → New Terminal.
+8. Vs Code: Terminal: winget install --id Git.Git
+9. Tutup Vs Code.
+10. Buka Vs Code lagi: Terminal → New Terminal.
+11. Vs Code: Terminal: git --version
+12. Vs Code: Terminal: PS C:\Users\DICKY MISWARDI\Desktop\bukutahfiz-v239-webapp>
+13. Vs Code: Terminal:
+git init
+git branch -M main
+git add .
+git commit -m "deploy1"
+git remote remove origin 2>$null
+git remote add origin https://github.com/{username_Github}/bukutahfiz.git
+git push -u origin main
+
+14. Vs Code: Terminal:
+npx wrangler login
+
+npx wrangler whoami
+
+npx wrangler d1 create auth01
+npx wrangler d1 create auth02
+npx wrangler d1 create auth03
+npx wrangler d1 create auth04
+npx wrangler d1 create auth05
+npx wrangler d1 create auth06
+npx wrangler d1 create auth07
+npx wrangler d1 create auth08
+npx wrangler d1 create auth09
+npx wrangler d1 create auth10
+
+npx wrangler d1 list
+
+pwd
+
+dir
+
+npx wrangler d1 execute auth01 --remote --file .\bukutahfiz-d1-auth01-main-console.sql
+
+npx wrangler d1 execute auth01 --remote --command "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
+
+2..10 | ForEach-Object {
+  $db = "auth{0:D2}" -f $_
+  Write-Host "Executing archive schema to $db..."
+  npx wrangler d1 execute $db --remote --file .\bukutahfiz-d1-auth02-auth10-archive-console.sql
+}
+
+2..10 | ForEach-Object {
+  $db = "auth{0:D2}" -f $_
+  Write-Host "`n=== $db ==="
+  npx wrangler d1 execute $db --remote --command "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
+}
+
+15. Buka di browser: https://dash.cloudflare.com/.
+16. Masuk menggunakan akun Github.
+17. dash.cloudflare.com: Add → Pages → Import an existing Git repository → Get Started → Repo: "bukutahfiz" → Begin setup → Project name: https://bukutahfiz.pages.dev → Save and Deploy.
+18. dash.cloudflare.com: Workers and Pages → Settings → Build configuration →
+
