@@ -3,8 +3,9 @@
 3. Buat repo private beri nama "buku tahfiz".
 4. Download Web App ZIP di: https://drive.google.com/drive/folders/13DKYr1_SQAgrwC7lduk2eHteRiIqW0ym?usp=sharing
 5. Ekstrak dan taruh di desktop.
+7. Buka Github Desktop → Push bukutahfiz-v239-webapp ke Github.
+
 6. Buka VS Code → File → Open Folder → bukutahfiz-v239-webapp.
-7. Buka Github Desktop → Push dari situ
 
 8. Vs Code: Terminal:
 
