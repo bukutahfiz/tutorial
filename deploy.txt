@@ -24,26 +24,12 @@ npx wrangler d1 create auth08
 npx wrangler d1 create auth09
 npx wrangler d1 create auth10
 
-npx wrangler d1 list
-
-pwd
-
-dir
-
 npx wrangler d1 execute auth01 --remote --file .\bukutahfiz-d1-auth01-main-console.sql
-
-npx wrangler d1 execute auth01 --remote --command "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
 
 2..10 | ForEach-Object {
   $db = "auth{0:D2}" -f $_
   Write-Host "Executing archive schema to $db..."
   npx wrangler d1 execute $db --remote --file .\bukutahfiz-d1-auth02-auth10-archive-console.sql
-}
-
-2..10 | ForEach-Object {
-  $db = "auth{0:D2}" -f $_
-  Write-Host "`n=== $db ==="
-  npx wrangler d1 execute $db --remote --command "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
 }
 
 9. Buka di browser: https://dash.cloudflare.com/.
