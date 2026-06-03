@@ -4,23 +4,9 @@
 4. Download Web App ZIP di: https://drive.google.com/drive/folders/13DKYr1_SQAgrwC7lduk2eHteRiIqW0ym?usp=sharing
 5. Ekstrak dan taruh di desktop.
 6. Buka VS Code → File → Open Folder → bukutahfiz-v239-webapp.
-7. Vs Code: Terminal → New Terminal.
-8. Vs Code: Terminal: winget install --id Git.Git
-9. Tutup Vs Code.
-10. Buka Vs Code lagi: Terminal → New Terminal.
-11. Vs Code: Terminal: git --version
-12. Vs Code: Terminal: PS C:\Users\DICKY MISWARDI\Desktop\bukutahfiz-v239-webapp>
-13. Vs Code: Terminal:
+7. Buka Github Desktop → Push dari situ
 
-git init
-git branch -M main
-git add .
-git commit -m "deploy1"
-git remote remove origin 2>$null
-git remote add origin https://github.com/{username_Github}/bukutahfiz.git
-git push -u origin main
-
-14. Vs Code: Terminal:
+8. Vs Code: Terminal:
 
 npx wrangler login
 
@@ -59,11 +45,11 @@ npx wrangler d1 execute auth01 --remote --command "SELECT name FROM sqlite_maste
   npx wrangler d1 execute $db --remote --command "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name;"
 }
 
-15. Buka di browser: https://dash.cloudflare.com/.
-16. Masuk menggunakan akun Github.
-17. Account home (dash.cloudflare.com): Add → Pages → Import an existing Git repository → Get Started → Repo: "bukutahfiz" → Begin setup → Project name: https://bukutahfiz.pages.dev → Save and Deploy.
-18. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → Settings → Build configuration → "Tanda pensil" → Framework preset → Nuxt.js → Save.
-19. dash.cloudflare.com: Workers and Pages → Settings → Variables and Secrets:
+9. Buka di browser: https://dash.cloudflare.com/.
+10. Masuk menggunakan akun Github.
+11. Account home (dash.cloudflare.com): Add → Pages → Import an existing Git repository → Get Started → Repo: "bukutahfiz" → Begin setup → Project name: https://bukutahfiz.pages.dev → Save and Deploy.
+12. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → Settings → Build configuration → "Tanda pensil" → Framework preset → Nuxt.js → Save.
+13. dash.cloudflare.com: Workers and Pages → Settings → Variables and Secrets:
 
 WHATSAPP_DEVELOPER → 08996830011
 USERS_PAGE_USERNAME → admin
@@ -75,16 +61,16 @@ RESET_CODE_PEPPER → @de88RTD (bebas)
 ARCHIVE_WORKER_URL → https://archive-manager.{bukutahfiz}.pages.dev
 ARCHIVE_WORKER_TOKEN → @de88RTD (harus sama dengan ADMIN_TOKEN Workers)
 
-20. Account home (dash.cloudflare.com): Add → Workers → Start with hello world! → Worker name: https://archive-manager.bukutahfiz.workers.dev → Deploy.
-21. dash.cloudflare.com: Workers and Pages → "archive-manager" → </> Edit code → Copy dan paste: https://github.com/raportahfiz/archivemanager/blob/main/workers.js → Deploy.
-22. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Variables and Secrets:
+14. Account home (dash.cloudflare.com): Add → Workers → Start with hello world! → Worker name: https://archive-manager.bukutahfiz.workers.dev → Deploy.
+15. dash.cloudflare.com: Workers and Pages → "archive-manager" → </> Edit code → Copy dan paste: https://github.com/raportahfiz/archivemanager/blob/main/workers.js → Deploy.
+16. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Variables and Secrets:
 
 ADMIN_TOKEN → @de88RTD (bebas)
 
-23. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Trigger Events:
+17. dash.cloudflare.com: Workers and Pages → "archive-manager" → Settings → Trigger Events:
 Cron expression → 8 14 * * * (artinya pukul 14:08 + 7 jam WIB)
 
-24. dash.cloudflare.com: Workers and Pages → "archive-manager" → Bindings → Add binding → + Binding:
+18. dash.cloudflare.com: Workers and Pages → "archive-manager" → Bindings → Add binding → + Binding:
 
 DB01 → auth01
 DB02 → auth02
@@ -97,8 +83,8 @@ DB08 → auth08
 DB09 → auth09
 DB10 → auth10
 
-25. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → titik tiga (...) → Retry deployment → Success.
-26. Tes aplikasi klik: bukutahfiz.pages.dev
+19. dash.cloudflare.com: Workers and Pages → "bukutahfiz" → titik tiga (...) → Retry deployment → Success.
+20. Tes aplikasi klik: bukutahfiz.pages.dev
 
 Catatan: setiap kali ganti token/password di "Variables and Secrets" harus "Retry deployment".
 
